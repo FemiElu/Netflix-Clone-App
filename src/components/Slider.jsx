@@ -1,10 +1,12 @@
 import React from 'react'
-import CardSlider from './CardSlider'
+import CardSlider from './CardSlider';
+
 
 const Slider = ({ movies }) => {
     const getMoviesFromRange = (from,to) =>{
         return movies.slice(from,to)
     }
+    
   return (
     <div>
         <CardSlider title="Trending Now" data={getMoviesFromRange(0,10)}/>

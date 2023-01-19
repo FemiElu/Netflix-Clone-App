@@ -47,8 +47,8 @@ const getRawData = async(api, genres,paging=false) =>{
          const {data:{results}, } =   await axios.get(`${api}${paging? `&page=${i}`: ""}`
          );
          createArrayFromRawData(results, moviesArray, genres);
-         return moviesArray;
-    }; 
+        }; 
+        return moviesArray;
 }
 
 export const fetchMovies = createAsyncThunk(
