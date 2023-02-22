@@ -35,7 +35,7 @@ const Netflix = () => {
 
       useEffect(()=>{
         if(genresLoaded) dispatch(fetchMovies({ type:"all" }))
-      })
+      },[genresLoaded])
 
   return (
     <Container>

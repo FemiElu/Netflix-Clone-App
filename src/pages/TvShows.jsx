@@ -29,7 +29,7 @@ const Movies = () => {
    
 
     useEffect(()=>{
-      if(genresLoaded) dispatch(fetchMovies({ type:"movies" }))
+      if(genresLoaded) dispatch(fetchMovies({ type:"tv" }))
     },[])
     
   window.onscroll = () =>{
@@ -50,7 +50,7 @@ const Movies = () => {
         <Navbar isScrolled={isScrolled}/>
         </div>
         <div className="data">
-        <SelectGenre genres={genres} type="movie"/>
+        <SelectGenre genres={genres} type="tv"/>
             {
                 movies.length ?<Slider movies={movies} />:<NotAvailable/>
             }
